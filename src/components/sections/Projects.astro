@@ -1,0 +1,92 @@
+---
+const projects = [
+	{
+		number: "01",
+		name: "Morrow",
+		type: "E-commerce concept",
+		description: "A quieter kind of storefront for considered everyday objects.",
+		className: "morrow",
+	},
+	{
+		number: "02",
+		name: "Goodfolk",
+		type: "Community platform",
+		description: "A welcoming digital home for people doing good things locally.",
+		className: "goodfolk",
+	},
+	{
+		number: "03",
+		name: "Still / Form",
+		type: "Studio portfolio",
+		description: "An expressive, editorial showcase for an independent creative studio.",
+		className: "stillform",
+	},
+];
+---
+
+<section class="work-section section-pad" id="work" aria-labelledby="work-title">
+	<div class="page-width">
+		<div class="section-heading">
+			<div>
+				<p class="eyebrow">A few things we’ve been imagining</p>
+				<h2 id="work-title">Selected <span>work</span></h2>
+			</div>
+			<p class="section-intro">
+				Thoughtful interfaces, purposeful details, and a little room to play.
+			</p>
+		</div>
+		<div class="project-grid">
+			{projects.map((project) => (
+				<article class="project-card">
+					<div class={`project-preview ${project.className}`}>
+						<div class="preview-top">
+							<span class="preview-brand">{project.name}</span>
+							<span class="preview-menu" aria-hidden="true">☰</span>
+						</div>
+						{project.className === "morrow" && (
+							<div class="morrow-scene">
+								<div class="morrow-copy">
+									<span>OBJECTS FOR SLOWER DAYS</span>
+									<strong>Make room<br />for meaning.</strong>
+									<i>SHOP THE COLLECTION&nbsp; ↗</i>
+								</div>
+								<div class="vase vase-one"></div>
+								<div class="vase vase-two"></div>
+								<div class="morrow-sun"></div>
+							</div>
+						)}
+						{project.className === "goodfolk" && (
+							<div class="goodfolk-scene">
+								<div class="goodfolk-copy">
+									<span>GOOD THINGS HAPPEN TOGETHER</span>
+									<strong>Find your<br />kind of good.</strong>
+									<i>MEET YOUR COMMUNITY&nbsp; ↗</i>
+								</div>
+								<div class="goodfolk-orbit orbit-one"></div>
+								<div class="goodfolk-orbit orbit-two"></div>
+								<div class="goodfolk-center">g</div>
+							</div>
+						)}
+						{project.className === "stillform" && (
+							<div class="stillform-scene">
+								<span class="stillform-kicker">INDEPENDENT CREATIVE PRACTICE</span>
+								<strong>Space to<br /><em>make</em> sense.</strong>
+								<div class="stillform-shape"></div>
+								<span class="stillform-index">SELECTED EXPLORATIONS</span>
+							</div>
+						)}
+					</div>
+					<div class="project-info">
+						<div>
+							<p class="project-type">{project.number} &nbsp; / &nbsp; {project.type}</p>
+							<h3>{project.name}</h3>
+							<p class="project-description">{project.description}</p>
+						</div>
+						<span class="project-arrow" aria-hidden="true">↗</span>
+					</div>
+				</article>
+			))}
+		</div>
+		<p class="work-note">A collection of concept projects and creative explorations.</p>
+	</div>
+</section>
