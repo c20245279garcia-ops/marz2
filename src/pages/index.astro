@@ -3,7 +3,6 @@ import About from "../components/sections/About.astro";
 import Contact from "../components/sections/Contact.astro";
 import Hero from "../components/sections/Hero.astro";
 import Process from "../components/sections/Process.astro";
-import Projects from "../components/sections/Projects.astro";
 import Services from "../components/sections/Services.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
@@ -17,7 +16,47 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		<Services />
 		<Process />
 		<About />
-		<Projects />
+		<section class="project-section section-pad" id="projects" aria-labelledby="projects-title">
+			<div class="page-width">
+				<div class="section-heading">
+					<div>
+						<p class="eyebrow">A recent project</p>
+						<h2 id="projects-title"><span>Projects</span></h2>
+					</div>
+					<p class="section-intro">A selection of website concepts and portfolio work.</p>
+				</div>
+				<div class="project-gallery">
+					<figure class="project-showcase">
+						<img src="/project/image.jpg" alt="Maeann Bakery website featuring its welcome section and sweet treats" loading="lazy" />
+						<figcaption>
+							<span>Maeann Bakery</span>
+							<span>Website design</span>
+						</figcaption>
+					</figure>
+					<figure class="project-showcase">
+						<img src="/project/franz-portfolio.jpg" alt="Franz Garcia web developer portfolio with a dark navy and purple design" loading="lazy" />
+						<figcaption>
+							<span>Franz Garcia Portfolio</span>
+							<span>Portfolio website</span>
+						</figcaption>
+					</figure>
+					<figure class="project-showcase">
+						<img src="/project/mommy-marj.png" alt="Mommy Marj bakery website with a pink offers section" loading="lazy" />
+						<figcaption>
+							<span>Mommy Marj</span>
+							<span>Website design</span>
+						</figcaption>
+					</figure>
+					<figure class="project-showcase">
+						<img src="/project/marjorie-boutique.png" alt="Marjorie fashion boutique website with an elegant hero section" loading="lazy" />
+						<figcaption>
+							<span>Marjorie Boutique</span>
+							<span>Fashion website</span>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
 		<Contact />
 	</main>
 	<Footer />
